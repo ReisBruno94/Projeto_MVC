@@ -1,0 +1,81 @@
+﻿@model List<Projeto.Entity.Conta>
+
+@{
+    ViewBag.Title = "Lista de Contas";
+}
+
+<h2 class="text-center text-success">Lista de Contas</h2>
+<div class="well well-sm">
+    <a class="btn btn-primary" href="~/Conta/Cadastrar">Novo</a>
+    <a class="btn btn-info" href="~/Cliente/BuscarClientes">Buscar</a>
+</div>
+
+<table class="table table-hover table-striped">
+    <thead>
+        <tr class="bg-primary">
+            <th>Código</th>
+            <th>Banco</th>
+            <th>Nome</th>
+            <th>Saldo</th>
+            <th>Excluir Conta</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@Html.DisplayFor(modelItem => item.ContaID)</td>
+                <td>@Html.DisplayFor(modelItem => item.Banco.NomeBanco)</td>
+                <td>@Html.DisplayFor(modelItem => item.Cliente.Nome)</td>
+                <td>@Html.DisplayFor(modelItem => item.Saldo)</td>
+
+                
+                <td><a class="btn btn-danger danger" data-id="@item.ContaID"><span class="fa fa-book"></span></a></td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="MyModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="ConteudoModal"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts
+{
+    <script>
+        $(function () {
+            $(".details").click(function () {
+                console.log("ok");
+
+                var id = $(this).attr("data-id");
+                console.log(id);
+                $("#ConteudoModal").load("/Conta/Detalhes/" + id, function () {
+                    $("#myModal").modal("show");
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(function () {
+            $(".danger").click(function () {
+                console.log("ok");
+
+                var id = $(this).attr("data-id");
+                console.log(id);
+                $("#ConteudoModal").load("/Conta/Deletar/" + id, function () {
+                    $("#myModal").modal("show");
+                });
+            });
+        });
+    </script>
+}

@@ -1,0 +1,25 @@
+﻿@model Projeto.Entity.Cliente
+
+@{
+    Layout = null;
+    ViewBag.Title = "Deseja Realmente deletar esse Cliente?";
+}
+
+<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+    <h4 class="modal-title">Detalhes do Cliente</h4>
+</div>
+<div class="modal-body">
+    <p>@Html.DisplayNameFor(model => model.ClienteID) : @Html.DisplayFor(model => model.ClienteID)</p>
+    <p>@Html.DisplayNameFor(model => model.Nome) : @Html.DisplayFor(model => model.Nome)</p>
+    <p>@Html.DisplayNameFor(model => model.Telefone) : @Html.DisplayFor(model => model.Telefone)</p>
+</div>
+
+@using (Html.BeginForm())
+{
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-success">Sim</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Não</button>
+    </div>
+}
+

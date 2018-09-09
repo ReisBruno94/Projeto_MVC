@@ -1,0 +1,10 @@
+C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Dao\bin\Debug\Projeto.Dao.dll
+C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Dao\bin\Debug\Projeto.Dao.pdb
+C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Dao\bin\Debug\Projeto.Entity.dll
+C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Dao\bin\Debug\Projeto.Entity.pdb
+C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Dao\obj\Debug\Projeto.Dao.csprojAssemblyReference.cache
+C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Dao\obj\Debug\Projeto.Dao.csproj.CoreCompileInputs.cache
+C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Dao\obj\Debug\Projeto.Dao.csproj.CopyComplete
+C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Dao\obj\Debug\Projeto.Dao.dll
+C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Dao\obj\Debug\Projeto.Dao.pdb
+C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Dao\bin\Debug\Projeto.Entity.dll.config
