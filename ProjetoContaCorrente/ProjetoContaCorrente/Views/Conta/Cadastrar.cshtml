@@ -1,6 +1,8 @@
 ﻿@model Projeto.Entity.Conta
 
 @{
+    /**/
+
     ViewBag.Title = "Cadastrar";
 }
 
@@ -40,4 +42,14 @@
             <a class="btn btn-primary" href="~/Cliente/Index">Voltar</a>
         </div>
     </div>
+
+
+
 }
+
+<div class="text-primary text-success text-center">
+    @ViewBag.MensagemExito
+</div>
+<div class="text-primary text-danger text-center">
+    @ViewBag.MensagemErro
+</div>

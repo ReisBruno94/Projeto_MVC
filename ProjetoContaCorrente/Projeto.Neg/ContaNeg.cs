@@ -21,10 +21,24 @@ namespace Projeto.Neg
         {
             Boolean bValidacao;
 
+            if(objConta.Saldo <= 0)
+            {
+                objConta.Estado = 2;
+                return;
+            }
+            bValidacao = objContaDao.Existe(objConta);
 
-
-            objContaDao.Criar(objConta);
-            return;
+            if (bValidacao)
+            {
+                objConta.Estado = 1;
+                return;
+            }
+            else
+            {
+                objConta.Estado = 99;
+                objContaDao.Criar(objConta);
+                return;
+            }
         }
 
         public List<Conta> PesquisarTodos()

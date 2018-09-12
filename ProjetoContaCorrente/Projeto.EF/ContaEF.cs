@@ -36,7 +36,13 @@ namespace Projeto.EF
 
         public bool Existe(Conta objClasse)
         {
-            throw new NotImplementedException();
+            int count = ConexaoBD.conta.Where(x => x.Cliente.ClienteID == objClasse.ClienteID && x.BancoID == objClasse.BancoID).Count();
+
+            if (count > 0)
+                return true;
+            else
+                return false;
+
         }
 
         public List<Conta> ListarTodos()

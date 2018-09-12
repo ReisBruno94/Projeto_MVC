@@ -9,7 +9,6 @@ C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Entity\bin\Debug\En
 C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Entity\bin\Debug\EntityFramework.xml
 C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Entity\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Entity\obj\Debug\Projeto.Entity.csproj.CopyComplete
-C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Entity\obj\Debug\Projeto.Entity.csprojAssemblyReference.cache
 C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Entity\bin\Debug\Microsoft.Win32.Primitives.dll
 C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Entity\bin\Debug\netstandard.dll
 C:\Users\wfrohlich\source\repos\ProjetoContaCorrente\Projeto.Entity\bin\Debug\System.AppContext.dll

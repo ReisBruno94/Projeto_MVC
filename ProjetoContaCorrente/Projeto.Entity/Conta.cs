@@ -20,6 +20,8 @@ namespace Projeto.Entity
 
         public decimal Saldo { get; set; }
 
+        public int Estado { get; set; }
+
         public virtual Cliente Cliente {get;set;}
 
         public virtual Banco Banco { get; set; }

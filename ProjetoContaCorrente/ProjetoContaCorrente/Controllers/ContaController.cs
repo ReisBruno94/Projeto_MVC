@@ -31,12 +31,12 @@ namespace ProjetoContaCorrente.Controllers
             return View(lstConta);
         }
 
-
+        [HttpGet]
         public ActionResult Cadastrar()
         {
             ViewBag.Cliente = objClienteNeg.ListarTodos();
             ViewBag.Banco = objBancoNeg.ListarTodos();
-
+            
             var objConta = new Conta();
             return View(objConta);
         }
@@ -46,8 +46,14 @@ namespace ProjetoContaCorrente.Controllers
         {
 
             objContaNeg.Criar(objConta);
+            MensagemErroCadastrar(objConta);
+            ModelState.Clear();
 
-            return RedirectToAction("Index");
+            ViewBag.Cliente = objClienteNeg.ListarTodos();
+            ViewBag.Banco = objBancoNeg.ListarTodos();
+
+            var objNewConta = new Conta();
+            return View(objNewConta);
         }
 
         public ActionResult Deletar(int? id)
@@ -62,6 +68,27 @@ namespace ProjetoContaCorrente.Controllers
         {
             objContaNeg.Excluir(id);
             return RedirectToAction("Index");
+        }
+
+        public void MensagemErroCadastrar(Conta objConta)
+        {
+
+            switch (objConta.Estado)
+            {
+                case 1://campo cpf com letras
+                    ViewBag.MensagemErro = "Conta/Banco com CPF já cadastrado";
+                    break;
+
+                case 2:
+                    ViewBag.MensagemErro = "Saldo não pode ser igual ou menor que zero";
+                    break;
+
+                case 99://Atualizado com sucesso
+                    ViewBag.MensagemExito = "Conta inserida com sucesso.";
+                    break;
+
+            }
+
         }
     }
 }

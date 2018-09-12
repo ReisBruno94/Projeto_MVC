@@ -10,12 +10,12 @@
     <a class="btn btn-info" href="~/Cliente/BuscarClientes">Buscar</a>
 </div>
 
-<table class="table table-hover table-striped">
+<table class="table table-hover table-striped sortable">
     <thead>
         <tr class="bg-primary">
-            <th>Código</th>
-            <th>Banco</th>
-            <th>Nome</th>
+            <th data-defaultsign="_19">Código</th>
+            <th data-defaultsign="AZ">Banco</th>
+            <th data-defaultsign="AZ">Nome</th>
             <th>Saldo</th>
             <th>Excluir Conta</th>
         </tr>
@@ -30,7 +30,7 @@
                 <td>@Html.DisplayFor(modelItem => item.Cliente.Nome)</td>
                 <td>@Html.DisplayFor(modelItem => item.Saldo)</td>
 
-                
+
                 <td><a class="btn btn-danger danger" data-id="@item.ContaID"><span class="fa fa-book"></span></a></td>
             </tr>
         }
